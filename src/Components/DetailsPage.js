@@ -25,7 +25,7 @@ const DetailsPage = (props) => {
             });
     };
 
-    useEffect(detailsFetcher, []);
+    useEffect(detailsFetcher);
 
     console.log(typeof details.gallery);
 

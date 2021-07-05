@@ -32,7 +32,7 @@ const FrontPage = (props) => {
                 />
                 <h2>{place.name}</h2>
                 <div className="icon">
-                    <img src={loc} />
+                    <img src={loc} alt="location" />
                     <p> {place.location}</p>
                 </div>
             </div>
