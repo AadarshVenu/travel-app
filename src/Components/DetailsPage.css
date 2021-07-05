@@ -1,0 +1,19 @@
+.location{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+}
+
+.location small{
+    border: 2px solid rgb(185, 181, 181);
+    border-radius: 15px;
+}
+
+.details{
+    padding: 50px 80px;
+}
+
+.main-image{
+    width:700px
+}

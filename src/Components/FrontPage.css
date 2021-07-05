@@ -5,7 +5,7 @@
     padding: 0%;
 }
 
-.places div img {
+.place-image {
     width: 300px;
     border-radius: 15px;
 }
@@ -15,10 +15,20 @@
     font-size: 20px;
 }
 
-.places div p {
-    margin-top: -30px;
+.icon{
+    display: flex;
+    align-items: center;
+    margin-top: -40px;
+    margin-left: -10px;
 }
 
-.welcome p {
-    margin-top: -30px;
+
+.icon p{
+    margin-left: -10px;
+}
+
+.description{
+    margin-top: -20px;
+    color: rgb(165, 161, 161);
+    font-weight:normal
 }
