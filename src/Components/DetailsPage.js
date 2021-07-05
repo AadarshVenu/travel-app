@@ -25,11 +25,10 @@ const DetailsPage = (props) => {
             });
     };
 
-    useEffect(detailsFetcher,[]);
-
-    console.log(typeof details.gallery);
+    useEffect(detailsFetcher, [params.id]);
 
     const renderDetails = (details) => {
+        
         return (
             <div>
                 <Helmet>
@@ -42,7 +41,11 @@ const DetailsPage = (props) => {
                         <img src={location} alt="location" />
                         {details.location}
                     </div>
-                    <img src={details.image} alt={details.name} className="main-image"/>
+                    <img
+                        src={details.image}
+                        alt={details.name}
+                        className="main-image"
+                    />
                     <h2>Place Details</h2>
                     <p>{details.description}</p>
                 </div>
