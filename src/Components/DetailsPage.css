@@ -1,19 +1,38 @@
-.location{
+.location {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: fit-content;
 }
 
-.location small{
+.location small {
     border: 2px solid rgb(185, 181, 181);
     border-radius: 15px;
 }
 
-.details{
+.details {
     padding: 50px 80px;
 }
 
-.main-image{
-    width:700px
+.main-image {
+    width: 560px;
+
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-gallery {
+    display: flex;
+    flex-wrap: wrap;
+     margin: -5px;
+}
+
+
+.sub-gallery-img {
+   width:250px;
+   height:160px;
+  
 }

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./FrontPage.css";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import location from "../assets/images/place.svg";
@@ -8,6 +7,7 @@ import "./DetailsPage.css";
 
 const DetailsPage = (props) => {
     const [details, setDetails] = useState([]);
+    const [gallery, setGallery] = useState();
     const params = useParams();
     // console.log("params", params);
 
@@ -19,6 +19,16 @@ const DetailsPage = (props) => {
             .then(function (response) {
                 setDetails(response.data.data);
                 // console.log(response.data.data);
+                setGallery(
+                    response.data.data.gallery.map((images) => (
+                        <img
+                            key={images.id}
+                            src={`${images.image}`}
+                            alt={images.id}
+                            className="sub-gallery-img"
+                        />
+                    ))
+                );
             })
             .catch(function (error) {
                 console.log(error);
@@ -28,7 +38,6 @@ const DetailsPage = (props) => {
     useEffect(detailsFetcher, [params.id]);
 
     const renderDetails = (details) => {
-        
         return (
             <div>
                 <Helmet>
@@ -41,11 +50,15 @@ const DetailsPage = (props) => {
                         <img src={location} alt="location" />
                         {details.location}
                     </div>
-                    <img
-                        src={details.image}
-                        alt={details.name}
-                        className="main-image"
-                    />
+                    <div className="gallery">
+                        <img
+                            src={details.image}
+                            alt={details.name}
+                            className="main-image"
+                        />
+                        <div className="sub-gallery">{gallery}</div>
+                    </div>
+
                     <h2>Place Details</h2>
                     <p>{details.description}</p>
                 </div>

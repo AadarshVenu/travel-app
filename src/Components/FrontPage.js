@@ -10,7 +10,7 @@ const FrontPage = (props) => {
     const history = useHistory();
     const imageFetcher = () => {
         axios
-            .get("https://www.traveller.talrop.works/api/v1/places/")
+            .get(`https://www.traveller.talrop.works/api/v1/places/`)
             .then(function (response) {
                 setPlaces(response.data.data);
                 // console.log(response.data.data);
@@ -24,7 +24,7 @@ const FrontPage = (props) => {
 
     const renderImages = () => {
         return places.map((place) => (
-            <div key={place.id} onClick={() => history.push(`/${place.id}`)}>
+            <div key={place.id} onClick={() => history.push(`/places/${place.id}`)}>
                 <img
                     src={place.image}
                     alt={place.name}
