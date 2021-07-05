@@ -4,6 +4,7 @@ import FrontPage from "./Components/FrontPage";
 import DetailsPage from "./Components/DetailsPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
 function App() {
     return (
         <Router>
@@ -13,8 +14,8 @@ function App() {
                     <Route path="/" exact>
                         <FrontPage />
                     </Route>
-                    <Route path="/second">
-                        <DetailsPage />
+                    <Route path="/:id">
+                        <DetailsPage/>
                     </Route>
                 </Switch>
             </>
