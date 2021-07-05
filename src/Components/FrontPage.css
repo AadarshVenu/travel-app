@@ -1,0 +1,24 @@
+.places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0%;
+}
+
+.places div img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+.places div h2 {
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+.places div p {
+    margin-top: -30px;
+}
+
+.welcome p {
+    margin-top: -30px;
+}
